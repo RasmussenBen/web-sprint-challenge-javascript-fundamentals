@@ -17,9 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
-
-
+//nestedFunction is able to reach outside of its scope in order to find 'internal' as 'internal' is not defined within the function itself. The function attempts to run the console.log command and begins searching for 'internal'. Once the function determines that it does not contain the variable, it broadens the scope of its search until the variable is found, in this case within the broader 'myFunction'. If 'internal' was only defined in a hypothetical function nested within 'nestedFunction', it would be unable to run as this definition is only able to be passed down, not up.
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
 /* Use summation to do the following:
@@ -28,11 +26,13 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let sum = 0;
+  for (let i = 0; i <= number; i++) {
+    sum += i;
   }
- 
+  return sum;
+}
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
